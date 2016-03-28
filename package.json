@@ -2,7 +2,7 @@
   "name": "simplesignal",
   "version": "1.0.0",
   "description": "Super-simple signals class",
-  "main": "dist/es6/SimpleSignal.js",
+  "main": "dist/es5/SimpleSignal.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
