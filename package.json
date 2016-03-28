@@ -1,0 +1,31 @@
+{
+  "name": "simplesignal",
+  "version": "1.0.0",
+  "description": "Super-simple signals class",
+  "main": "dist/es6/SimpleSignal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeh/simplesignal.git"
+  },
+  "keywords": [
+    "signals",
+    "events",
+	"minimal",
+	"small",
+	"simple",
+	"callbacks",
+	"tiny"
+  ],
+  "author": "Zeh Fernando <npm@zehfernando.com> http://zehfernando.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeh/simplesignal/issues"
+  },
+  "homepage": "https://github.com/zeh/simplesignal#readme",
+  "devDependencies": {
+    "typescript": "^1.8.9"
+  }
+}
