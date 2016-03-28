@@ -1,6 +1,6 @@
 {
   "name": "simplesignal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Super-simple signals class",
   "main": "dist/es5/SimpleSignal.js",
   "scripts": {
@@ -16,11 +16,11 @@
   "keywords": [
     "signals",
     "events",
-	"minimal",
-	"small",
-	"simple",
-	"callbacks",
-	"tiny"
+    "callbacks",
+    "minimal",
+    "small",
+    "simple",
+    "tiny"
   ],
   "author": "Zeh Fernando <npm@zehfernando.com> http://zehfernando.com",
   "license": "MIT",
