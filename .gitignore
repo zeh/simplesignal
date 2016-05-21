@@ -1,4 +1,5 @@
 .tscache
 node_modules
 npm-debug.log
-_todo.txt
+_*.txt
+_*.bat
