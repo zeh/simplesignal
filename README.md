@@ -13,9 +13,10 @@ $ npm install simplesignal
 You create signals that other classes subscribe to. Example:
 
 ```
-// Include
-SimpleSignal = require('simplesignal')
-// Or
+// Include (JavaScript ES5)
+var SimpleSignal = require('simplesignal').default;
+
+// Include (JavaScript ES6, TypeScript)
 import SimpleSignal from 'simplesignal';
 
 // Declare, inside MyClass
