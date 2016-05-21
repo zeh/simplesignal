@@ -16,7 +16,10 @@ You create signals that other classes subscribe to. Example:
 // Include (JavaScript ES5)
 var SimpleSignal = require('simplesignal').default;
 
-// Include (JavaScript ES6, TypeScript)
+// Include (JavaScript ES6) (Test!)
+import * as SimpleSignal from 'simplesignal';
+
+// Include (TypeScript)
 import SimpleSignal from 'simplesignal';
 
 // Declare, inside MyClass
