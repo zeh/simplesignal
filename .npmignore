@@ -1,5 +1,9 @@
 .tscache
 node_modules
 npm-debug.log
+_todo.txt
 
 src
+tests
+tsconfig.json
+tslint.json
