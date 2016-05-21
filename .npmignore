@@ -1,6 +1,7 @@
 .tscache
 .vscode
 .gitattributes
+dist
 node_modules
 npm-debug.log
 _todo.txt
