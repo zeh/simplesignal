@@ -29,9 +29,9 @@ test('Dispatching', function (assert) {
 
 	signal.add(myFunc);
 	signal.dispatch(1);
-	assert.strictEqual(acc, 1);
+	assert.strictEqual(acc, 1, "Sum should be 1");
 	signal.dispatch(2);
-	assert.strictEqual(acc, 3);
+	assert.strictEqual(acc, 3, "Sum should be 3");
 });
 
 function myFunc(val) {
