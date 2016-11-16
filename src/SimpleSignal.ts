@@ -6,9 +6,6 @@ export default class SimpleSignal<F extends Function> {
 	// Properties
 	private functions:Array<F> = [];
 
-	// Temp variables
-	private ifr:number;
-
 
 	// ================================================================================================================
 	// CONSTRUCTOR ----------------------------------------------------------------------------------------------------
@@ -29,9 +26,9 @@ export default class SimpleSignal<F extends Function> {
 	}
 
 	public remove(func:F):boolean {
-		this.ifr = this.functions.indexOf(func);
-		if (this.ifr > -1) {
-			this.functions.splice(this.ifr, 1);
+		const ifr = this.functions.indexOf(func);
+		if (ifr > -1) {
+			this.functions.splice(ifr, 1);
 			return true;
 		}
 		return false;
