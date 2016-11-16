@@ -43,10 +43,10 @@ export default class SimpleSignal<F extends Function> {
 	}
 
 	public dispatch(...args:any[]):void {
-		let functionsDuplicate:Array<Function> = this.functions.concat();
-		for (let i = 0; i < functionsDuplicate.length; i++) {
-			functionsDuplicate[i].apply(undefined, args);
-		}
+		const functionsDuplicate:Array<Function> = this.functions.concat();
+		functionsDuplicate.forEach(func => {
+			func.apply(undefined, args);
+		});
 	}
 
 
