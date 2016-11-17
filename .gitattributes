@@ -1,1 +1,2 @@
-dist/es5/* linguist-vendored
+dist/* linguist-vendored
+test/* linguist-vendored
