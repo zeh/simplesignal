@@ -9,7 +9,7 @@
     "test": "mocha test/.setup.js test/**/*-test-*.js",
     "test:watch": "mocha -w test/.setup.js test/**/*-test-*.js",
     "lint": "tslint -c tslint.json src/*.ts",
-    "prepublish": "webpack --debug; webpack -p"
+    "prepublish": "webpack"
   },
   "repository": {
     "type": "git",
