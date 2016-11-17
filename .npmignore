@@ -1,4 +1,5 @@
 .tscache
+.nyc_output
 .vscode
 .gitattributes
 node_modules
