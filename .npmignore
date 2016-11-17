@@ -7,6 +7,7 @@ _*.txt
 _*.bat
 
 src
-tests
+test
 tsconfig.json
 tslint.json
+webpack.config.js
