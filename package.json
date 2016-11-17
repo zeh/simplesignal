@@ -1,6 +1,6 @@
 {
   "name": "simplesignal",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "Super-simple signals class",
   "main": "dist/simplesignal.js",
   "scripts": {
