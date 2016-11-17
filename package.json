@@ -1,13 +1,15 @@
 {
   "name": "simplesignal",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Super-simple signals class",
-  "main": "dist/es5/SimpleSignal.js",
+  "main": "dist/simplesignal.js",
   "scripts": {
-    "tsc": "tsc --pretty",
-    "test": "node tests/test",
+    "build": "webpack",
+    "coverage": "nyc npm test",
+    "test": "mocha test/.setup.js test/**/*-test-*.js",
+    "test:watch": "mocha -w test/.setup.js test/**/*-test-*.js",
     "lint": "tslint -c tslint.json src/*.ts",
-    "build": "npm run lint && npm run tsc"
+    "prepublish": "webpack --debug; webpack -p"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
     "small",
     "simple",
     "tiny",
-	"typescript"
+    "typescript"
   ],
   "author": "Zeh Fernando <npm@zehfernando.com> http://zehfernando.com",
   "license": "MIT",
@@ -30,8 +32,35 @@
   },
   "homepage": "https://github.com/zeh/simplesignal#readme",
   "devDependencies": {
-    "tape": "^4.5.1",
-    "tslint": "^3.3.0",
-    "typescript": "^1.8.9"
+    "ava": "^0.16.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "chai": "^3.5.0",
+    "change-case": "^3.0.0",
+    "core-js": "^2.4.1",
+    "coveralls": "^2.11.11",
+    "cross-env": "^3.1.3",
+    "mocha": "^3.1.2",
+    "nyc": "^9.0.1",
+    "rimraf": "^2.5.3",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.0",
+    "ts-loader": "^1.2.1",
+    "tslint": "^3.13.0",
+    "tslint-loader": "^2.1.5",
+    "typescript": "^2.0.10",
+    "webpack": "^1.13.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
