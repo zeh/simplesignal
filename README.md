@@ -97,3 +97,7 @@ onSomethingHappened.add(myFunc);
 // Dispatch must also respect the interface
 onSomethingHappened.dispatch("some-action")
 ```
+
+## License
+
+[MIT](LICENSE.md).
