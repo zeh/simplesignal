@@ -2,7 +2,8 @@
   "name": "simplesignal",
   "version": "2.1.2",
   "description": "Super-simple signals class",
-  "main": "dist/simplesignal.js",
+  "main": "./dist/SimpleSignal.js",
+  "types": "./dist/src/SimpleSignal.d.ts",
   "scripts": {
     "build": "webpack",
     "coverage": "nyc npm test",
