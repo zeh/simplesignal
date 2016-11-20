@@ -9,42 +9,39 @@ SimpleSignal is created with TypeScript, but aimed to be used as a standard Java
 ## Install
 
 
-```
-$ npm install simplesignal
+```shell
+npm install simplesignal
 ```
 
 ## Usage
 
 First, import your signal:
 
-```
-// Include (JavaScript ES5)
+```javascript
+// Import (JavaScript ES5)
 var SimpleSignal = require('simplesignal').default;
 
-// Include (JavaScript ES6)
-import SimpleSignal from 'simplesignal';
-
-// Include (TypeScript)
+// Import (JavaScript ES6 and TypeScript)
 import SimpleSignal from 'simplesignal';
 ```
 
 Then, you can create a signal. For example, inside a class:
 
-```
+```javascript
 public onSomethingHappened = new SimpleSignal();
 ```
 
 Then other parts of the code can subscribe (listen) to that signal:
 
-```
+```javascript
 myClassObject.onSomethingHappened.add(function(id) {
-	console.log("Something happened with an id of " + id
+    console.log("Something happened with an id of " + id
 });
 ```
 
 Signals can then be dispatched with parameters:
 
-```
+```javascript
 onSomethingHappened.dispatch("some-id");
 ```
 
@@ -52,7 +49,7 @@ This will call all subscribed functions with the given parameter.
 
 ## Full reference (JS)
 
-```
+```javascript
 // Create
 onSomethingHappened = new SimpleSignal();
 
@@ -82,13 +79,13 @@ If your project already uses TypeScript, it has the advantage of using SimpleSig
 
 In this case, one can use a generic interface to enforce the correct dispatch/listener parameters:
 
-```
+```javascript
 // Create, with a given interface as a Generic
 onSomethingHappened = new SimpleSignal<(action:string) => void>();
 
 // The listeners must fulfill the interface
 function myFunc(action:string) {
-	console.log(action);
+    console.log(action);
 }
 
 // Subscribe
