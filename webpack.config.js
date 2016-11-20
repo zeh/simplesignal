@@ -1,12 +1,36 @@
-var webpack = require('webpack')
-var path = require('path')
+const webpack = require('webpack')
+const path = require('path')
 
-// This is based on:
-// https://github.com/itajaja/tslib-webpack-starter
-// https://shellmonger.com/2016/03/11/creating-javascript-libraries-with-typescript-and-webpack/
+const APP_PATH = path.resolve(__dirname, 'src/SimpleSignal.ts')
+const BUILD_PATH = path.resolve(__dirname, 'dist')
+const PRODUCTION = process.env.NODE_ENV === 'production';
 
-var APP_PATH = path.resolve(__dirname, 'src/SimpleSignal.ts')
-var BUILD_PATH = path.resolve(__dirname, 'dist')
+const basePlugins = [
+];
+
+const devPlugins = [
+	new webpack.NoErrorsPlugin(),
+];
+
+const prodPlugins = [
+	new webpack.optimize.OccurenceOrderPlugin(),
+	new webpack.optimize.DedupePlugin(),
+	new webpack.optimize.UglifyJsPlugin({
+		compress: {
+			warnings: false,
+			sequences: true,
+			dead_code: true,
+			conditionals: true,
+			booleans: true,
+			unused: true,
+			if_return: true,
+			join_vars: true,
+			drop_console: true
+		},
+		comments: false,
+		sourceMap: false,
+	}),
+];
 
 module.exports = {
 	entry: APP_PATH,
@@ -39,21 +63,7 @@ module.exports = {
 		failOnHint: true
 	},
 
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-				sequences: true,
-				dead_code: true,
-				conditionals: true,
-				booleans: true,
-				unused: true,
-				if_return: true,
-				join_vars: true,
-				drop_console: true
-			},
-			comments: false,
-			sourceMap: false,
-		}),
-	]
+	plugins: basePlugins
+		.concat(PRODUCTION ? prodPlugins : [])
+		.concat(!PRODUCTION ? devPlugins : [])
 }
