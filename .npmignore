@@ -1,5 +1,6 @@
 .tscache
 .nyc_output
+.travis.yml
 .vscode
 .gitattributes
 node_modules
