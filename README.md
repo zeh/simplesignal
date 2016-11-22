@@ -1,5 +1,10 @@
 # Simple Signal
 
+[![npm](https://img.shields.io/npm/v/simplesignal.svg)](https://www.npmjs.com/package/simplesignal)
+[![Build Status](https://travis-ci.org/zeh/simplesignal.svg?branch=master)](https://travis-ci.org/zeh/simplesignal)
+[![Coverage Status](https://coveralls.io/repos/github/zeh/simplesignal/badge.svg?branch=master)](https://coveralls.io/github/zeh/simplesignal?branch=master)
+[![Dependency Status](https://david-dm.org/zeh/simplesignal.svg)](https://david-dm.org/zeh/simplesignal)
+
 This is a super-simple signals class inspired by [Robert Penner's AS3Signals](http://github.com/robertpenner/as3-signals).
 
 Signals are like *Events*, *Delegates*, or *Callbacks* on other languages or platforms. You can create a signal that other parts of the code can "listen" to. When that signal is *dispatched*, all listeners are called with the passed parameters.
