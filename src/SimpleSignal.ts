@@ -4,13 +4,14 @@
 export default class SimpleSignal<F extends Function> {
 
 	// Properties
-	private functions:Array<F> = [];
+	private functions:F[];
 
 
 	// ================================================================================================================
 	// CONSTRUCTOR ----------------------------------------------------------------------------------------------------
 
 	constructor() {
+		this.functions = [];
 	}
 
 
@@ -43,8 +44,8 @@ export default class SimpleSignal<F extends Function> {
 	}
 
 	public dispatch(...args:any[]):void {
-		const functionsDuplicate:Array<Function> = this.functions.concat();
-		functionsDuplicate.forEach(func => {
+		const functionsDuplicate:Function[] = this.functions.concat();
+		functionsDuplicate.forEach((func) => {
 			func.apply(undefined, args);
 		});
 	}
