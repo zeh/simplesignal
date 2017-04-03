@@ -1,3 +1,4 @@
+.babelrc
 .tscache
 .nyc_output
 .travis.yml

@@ -56,11 +56,6 @@
     "typescript": "^2.1.4",
     "webpack": "^1.14.0"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "importSort": {
     ".js, .jsx, .es6, .es": {
       "parser": "babylon",
