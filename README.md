@@ -24,7 +24,7 @@ First, import your signal:
 
 ```javascript
 // Import (JavaScript ES5)
-var SimpleSignal = require('simplesignal').default;
+var SimpleSignal = require('simplesignal');
 
 // Import (JavaScript ES6 and TypeScript)
 import SimpleSignal from 'simplesignal';
