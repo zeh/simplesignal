@@ -3,8 +3,9 @@
   "version": "2.1.7",
   "description": "Super-simple signals class",
   "main": "./dist/SimpleSignal.js",
-  "types": "./dist/src/SimpleSignal.d.ts",
+  "types": "./dist/SimpleSignal.d.ts",
   "scripts": {
+    "compile": "tsc",
     "build": "cross-env NODE_ENV=production ./node_modules/webpack/bin/webpack.js --config webpack.config.js --progress --verbose --colors --display-error-details",
     "dev": "webpack --config webpack.config.js --progress --verbose --colors --display-error-details",
     "coverage": "nyc npm test",
