@@ -45,8 +45,8 @@
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^10.0.0",
     "rimraf": "^2.5.4",
-    "tslint": "^4.0.2",
-    "typescript": "^2.1.4"
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
   },
   "importSort": {
     ".js, .jsx, .es6, .es": {
