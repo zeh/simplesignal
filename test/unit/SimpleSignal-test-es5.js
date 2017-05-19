@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var SimpleSignal = require("./../../dist/SimpleSignal.js").default;
+var SimpleSignal = require("./../../dist/SimpleSignal.commonjs.js");
 
 var acc = 0;
 function myFunc(val) {
