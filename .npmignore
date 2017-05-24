@@ -15,4 +15,4 @@ _*.bat
 
 tsconfig.json
 tslint.json
-webpack.config.js
+rollup.config.js
