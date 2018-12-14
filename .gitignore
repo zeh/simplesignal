@@ -1,6 +1,7 @@
 .tscache
 .coveralls.yml
 coverage
+dist
 node_modules
 npm-debug.log
 src/*.js
