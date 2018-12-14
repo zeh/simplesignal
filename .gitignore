@@ -1,7 +1,8 @@
 .tscache
-.nyc_output
 .coveralls.yml
+coverage
 node_modules
 npm-debug.log
 _*.txt
 _*.bat
+.rpt2_cache
