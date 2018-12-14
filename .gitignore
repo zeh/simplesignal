@@ -3,6 +3,8 @@
 coverage
 node_modules
 npm-debug.log
+src/*.js
+src/*.d.ts
 _*.txt
 _*.bat
 .rpt2_cache
