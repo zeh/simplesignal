@@ -4,7 +4,7 @@
 	"description": "Super-simple signals class",
 	"main": "./dist/SimpleSignal.umd.js",
 	"module": "./dist/SimpleSignal.es.js",
-	"types": "./src/SimpleSignal.d.ts",
+	"types": "./dist/SimpleSignal.d.ts",
 	"scripts": {
 		"build": "rimraf dist && rollup -c",
 		"build:declarations": "tsc -d",
