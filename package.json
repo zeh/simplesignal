@@ -42,7 +42,6 @@
 		"babel-jest": "^23.6.0",
 		"coveralls": "^3.0.2",
 		"jest": "^23.6.0",
-		"regenerator-runtime": "^0.13.1",
 		"rimraf": "^2.5.4",
 		"rollup": "^0.67.4",
 		"rollup-plugin-typescript": "^1.0.0",
