@@ -1,6 +1,6 @@
 {
 	"name": "simplesignal",
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"description": "Super-simple signals class",
 	"main": "./dist/SimpleSignal.umd.js",
 	"module": "./dist/SimpleSignal.es.js",
