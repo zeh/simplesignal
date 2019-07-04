@@ -4,7 +4,7 @@
 export default class SimpleSignal<F extends Function> {
 
 	// Properties
-	private functions:F[];
+	private functions: F[];
 
 
 	// ================================================================================================================
@@ -18,7 +18,7 @@ export default class SimpleSignal<F extends Function> {
 	// ================================================================================================================
 	// PUBLIC INTERFACE -----------------------------------------------------------------------------------------------
 
-	public add(func:F):boolean {
+	public add(func: F): boolean {
 		if (this.functions.indexOf(func) === -1) {
 			this.functions.push(func);
 			return true;
@@ -26,7 +26,7 @@ export default class SimpleSignal<F extends Function> {
 		return false;
 	}
 
-	public remove(func:F):boolean {
+	public remove(func: F): boolean {
 		const ifr = this.functions.indexOf(func);
 		if (ifr > -1) {
 			this.functions.splice(ifr, 1);
@@ -35,7 +35,7 @@ export default class SimpleSignal<F extends Function> {
 		return false;
 	}
 
-	public removeAll():boolean {
+	public removeAll(): boolean {
 		if (this.functions.length > 0) {
 			this.functions.length = 0;
 			return true;
@@ -43,8 +43,8 @@ export default class SimpleSignal<F extends Function> {
 		return false;
 	}
 
-	public dispatch(...args:any[]):void {
-		const functionsDuplicate:Function[] = this.functions.concat();
+	public dispatch(...args: any[]): void {
+		const functionsDuplicate = this.functions.concat();
 		functionsDuplicate.forEach((func) => {
 			func.apply(undefined, args);
 		});
@@ -54,7 +54,7 @@ export default class SimpleSignal<F extends Function> {
 	// ================================================================================================================
 	// ACCESSOR INTERFACE ---------------------------------------------------------------------------------------------
 
-	public get numItems():number {
+	public get numItems(): number {
 		return this.functions.length;
 	}
 }
