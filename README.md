@@ -39,8 +39,8 @@ public onSomethingHappened = new SimpleSignal();
 Then other parts of the code can subscribe (listen) to that signal:
 
 ```javascript
-myClassObject.onSomethingHappened.add(function(id) {
-    console.log("Something happened with an id of " + id
+myClassObject.onSomethingHappened.add((id) => {
+    console.log("Something happened with an id of " + id);
 });
 ```
 
