@@ -1,4 +1,6 @@
-export default class SimpleSignal<F extends Function> {
+type UnknownFunction = (...args: unknown[]) => unknown;
+
+export default class SimpleSignal<F extends UnknownFunction> {
 	// Properties ---
 
 	private functions: F[];
@@ -36,10 +38,10 @@ export default class SimpleSignal<F extends Function> {
 		return false;
 	}
 
-	public dispatch(...args: any[]): void {
+	public dispatch(...args: Parameters<F>): void {
 		const functionsDuplicate = this.functions.concat();
 		functionsDuplicate.forEach((func) => {
-			func.apply(undefined, args);
+			func(...args);
 		});
 	}
 
