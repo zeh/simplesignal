@@ -1,22 +1,15 @@
-/**
- * @author zeh fernando
- */
 export default class SimpleSignal<F extends Function> {
+	// Properties ---
 
-	// Properties
 	private functions: F[];
 
-
-	// ================================================================================================================
-	// CONSTRUCTOR ----------------------------------------------------------------------------------------------------
+	// Constructor ---
 
 	constructor() {
 		this.functions = [];
 	}
 
-
-	// ================================================================================================================
-	// PUBLIC INTERFACE -----------------------------------------------------------------------------------------------
+	// Public ---
 
 	public add(func: F): boolean {
 		if (this.functions.indexOf(func) === -1) {
@@ -50,9 +43,7 @@ export default class SimpleSignal<F extends Function> {
 		});
 	}
 
-
-	// ================================================================================================================
-	// ACCESSOR INTERFACE ---------------------------------------------------------------------------------------------
+	// Accessor ---
 
 	public get numItems(): number {
 		return this.functions.length;
