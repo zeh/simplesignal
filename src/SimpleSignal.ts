@@ -1,4 +1,6 @@
-type UnknownFunction = (...args: unknown[]) => unknown;
+// This should be unknown[], but it gives a "Type 'unknown' is not assignable to type 'something'" error.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type UnknownFunction = (...args: any[]) => unknown;
 
 export default class SimpleSignal<F extends UnknownFunction> {
 	// Properties ---
